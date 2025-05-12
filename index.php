@@ -1,0 +1,61 @@
+<?php
+require_once 'includes/config.php';
+require_once 'includes/auth.php';
+?>
+
+<?php include 'includes/header.php'; ?>
+
+<div class="jumbotron bg-light p-5 rounded-lg m-3">
+    <h1 class="display-4">Welcome to Techlearning</h1>
+    <p class="lead">Your one-stop destination for all study materials, question papers, syllabus, and tutorial videos.</p>
+    <hr class="my-4">
+    <p>Access high-quality educational resources to boost your learning experience.</p>
+    <?php if (!isLoggedIn()): ?>
+    <a class="btn btn-primary btn-lg" href="register.php" role="button">Get Started</a>
+    <?php endif; ?>
+</div>
+<h1 style="text-align: center">FEATURE</h1>
+<div class="row">
+    <div class="col-md-3 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-book fa-3x mb-3 text-primary"></i>
+                <h5 class="card-title">Study Notes</h5>
+                <p class="card-text">Comprehensive notes for all subjects.</p>
+                <a href="notes.php" class="btn btn-outline-primary">View Notes</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-file-alt fa-3x mb-3 text-success"></i>
+                <h5 class="card-title">Question Papers</h5>
+                <p class="card-text">Previous year question papers.</p>
+                <a href="papers.php" class="btn btn-outline-success">View Papers</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-list fa-3x mb-3 text-info"></i>
+                <h5 class="card-title">Syllabus</h5>
+                <p class="card-text">Detailed all course syllabus.</p>
+                <a href="syllabus.php" class="btn btn-outline-info">View Syllabus</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-4">
+        <div class="card h-100">
+            <div class="card-body text-center">
+                <i class="fas fa-video fa-3x mb-3 text-danger"></i>
+                <h5 class="card-title">Tutorial Videos</h5>
+                <p class="card-text">Educational video tutorials.</p>
+                <a href="videos.php" class="btn btn-outline-danger">View Videos</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php include 'includes/footer.php'; ?>
